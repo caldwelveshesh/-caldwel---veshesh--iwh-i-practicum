@@ -57,13 +57,14 @@ app.post('/update-cobj', async (req, res) => {
     Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
     'Content-Type': 'application/json'
   };
-  const contactData = {
-    properties: {
-      full_name: req.body.full_name,
-      favorite_color: req.body.favorite_color,
-      bio: req.body.bio
-    }
-  };
+const contactData = {
+  properties: {
+    firstname: req.body.full_name,
+    full_name: req.body.full_name,
+    favorite_color: req.body.favorite_color,
+    bio: req.body.bio
+  }
+};
 
   try {
     await axios.post(createContact, contactData, { headers });
