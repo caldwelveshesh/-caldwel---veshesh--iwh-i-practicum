@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1= title
+    a(href='/') Return to the homepage
+    form(action='/update-cobj', method='POST')
+      label(for='full_name') Name:
+      input(type='text', name='full_name', id='full_name')
+      br
+      label(for='favorite_color') Favorite Color:
+      input(type='text', name='favorite_color', id='favorite_color')
+      br
+      label(for='bio') Bio:
+      input(type='text', name='bio', id='bio')
+      br
+      button(type='submit') Submit
